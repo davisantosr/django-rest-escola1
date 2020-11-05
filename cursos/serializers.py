@@ -23,7 +23,14 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
 
 
 class CursoSerializer(serializers.ModelSerializer):
-  
+  '''
+  Nested Relationship
+
+  Show the relationship between avaliacoes and cursos
+
+'''
+  avaliacoes = AvaliacaoSerializer(many=True, read_only=True)
+
   class Meta:
     model = Curso
     fields = (
@@ -32,4 +39,5 @@ class CursoSerializer(serializers.ModelSerializer):
       'url',
       'criacao',
       'ativo',
+      'avaliacoes',
     )
