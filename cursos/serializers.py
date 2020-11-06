@@ -24,13 +24,22 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
 
 class CursoSerializer(serializers.ModelSerializer):
   '''
-  Nested Relationship
-
+  NESTED RELATIONSHIP
   Show the relationship between avaliacoes and cursos
 
-'''
   avaliacoes = AvaliacaoSerializer(many=True, read_only=True)
 
+  HYPERLINKED RELATED FIELD
+  create a hyperlink to the data(its own link for endpoint)
+
+  avaliacoes = serializers.HyperlinkedRelatedField(
+    many=True, read_only=True, view_name='avaliacao-detail')
+
+  PRIMARY KEY RELATED
+  show the objects related's primary key
+'''
+
+  avaliacoes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
   class Meta:
     model = Curso
     fields = (
