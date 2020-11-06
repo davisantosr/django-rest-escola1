@@ -24,10 +24,6 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
 
 class CursoSerializer(serializers.ModelSerializer):
   '''
-<<<<<<< HEAD
-  NESTED RELATIONSHIP
-=======
-<<<<<<< HEAD
   NESTED RELATIONSHIP
   Show the relationship between avaliacoes and cursos
 
