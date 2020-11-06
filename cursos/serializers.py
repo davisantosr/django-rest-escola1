@@ -24,6 +24,7 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
 
 class CursoSerializer(serializers.ModelSerializer):
   '''
+<<<<<<< HEAD
   NESTED RELATIONSHIP
   Show the relationship between avaliacoes and cursos
 
@@ -40,6 +41,15 @@ class CursoSerializer(serializers.ModelSerializer):
 '''
 
   avaliacoes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+=======
+  Nested Relationship
+
+  Show the relationship between avaliacoes and cursos
+
+'''
+  avaliacoes = AvaliacaoSerializer(many=True, read_only=True)
+
+>>>>>>> b7278e55e0b33631affda8db39dcd9709a2ca121
   class Meta:
     model = Curso
     fields = (
