@@ -20,6 +20,12 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
       'criacao',
       'ativo',
     )
+    #pattern validate_<field name>
+  def validate_avaliacao(self, valor):
+    if valor in range(1, 6):
+      return valor
+    raise serializers.ValidationError('Avaliação precisa ser inteiro de 1 a 5')
+  
 
 
 class CursoSerializer(serializers.ModelSerializer):
