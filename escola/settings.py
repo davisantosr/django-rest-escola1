@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 
 token for test = '39a581cffd6212ceec9e5a38df0bb01dc9ddca9c'
+token for user1 = 'b45bb4512c74946db1e875a24c477b8606078f26'
 
 """
 import os
