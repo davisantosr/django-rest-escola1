@@ -10,10 +10,10 @@ curso_atualizado = {
   "url": "https://www.testing.com.br"
 }
 
-resultado = requests.get(
-  url=f'{url_base_cursos}2/', 
-  headers=headers, 
-)
+# resultado = requests.get(
+#   url=f'{url_base_cursos}2/', 
+#   headers=headers, 
+# )
 
 # print(resultado.json())
 
@@ -29,4 +29,4 @@ resultado = requests.get(
 # #Testando o titulo
 # assert resultado.json()['titulo'] == curso_atualizado['titulo']
 
-print(resultado.json())
+# print(resultado.json())
